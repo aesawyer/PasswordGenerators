@@ -10,7 +10,7 @@
 *.gitattributes text
 .gitignore text
 *.md text
-*/Python/__pycache__/* linguist-vendored
-*/Python/build/* linguist-vendored
-*/Python/dist/* linguist-vendored
-*/Python/PasswordGenerator.spec linguist-vendored
+/Python/__pycache__/* linguist-vendored
+/Python/build/* linguist-vendored
+/Python/dist/* linguist-vendored
+/Python/PasswordGenerator.spec linguist-vendored
