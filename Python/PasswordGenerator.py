@@ -2,28 +2,42 @@ import random
 import os
 import sys
 
-alph = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+alph = ['abcdefghijklmnopqrstuvwxyz']
 num = [0,1,2,3,4,5,6,7,8,9]
-spec = ['!','@','#','$','%','^','&','*','(',')','{','}','<','>','?']
+spec = ['!@#$%^&*(){}<>?']
 
 def main():
     print('Password Generator - Python Implementation')
     print('--------------------------------------------')
     print('How long would you like the password?')
     passlen = passLength()
-    print('Password length is ')
+    print('passlen: ' + str(passlen))
+    print('Upper-Case Letters? (True, False)')
+    upCheck = BoolCheck()
+    print(upCheck)
 
 def passLength():
-    passlen = sys.stdin.readline()
+    len = sys.stdin.readline()
     try:
-        passlen = int(passlen)
+        len = int(len)
     except ValueError:
-        print('Must enter a number')
+        print('    Must enter a number')
+        len = None
         passLength()
-    if passlen < 6:
-        print('Invalid Entry. Password must be at least 6 characters in length')
+    len = int(len)
+    if len < 6:
+        print('    Invalid Entry. Password must be at least 6 characters in length')
         passLength()
     else:
-        return passlen
+        return len
+
+def BoolCheck():
+    upCheck = sys.stdin.readline()
+    try:
+        upCheck == 'True'
+    except ValueError:
+        print('    Must enter True or False')
+        BookCheck()
+    return upCheck
 
 main()
