@@ -10,26 +10,22 @@ def main():
     print('Password Generator - Python Implementation')
     print('--------------------------------------------')
     print('How long would you like the password?')
-    passlen = passLength()
-    print('passlen: ' + str(passlen))
+    lenCheck = passLength()
     print('Upper-Case Letters? (True, False)')
     upCheck = BoolCheck()
     print(upCheck)
 
 def passLength():
-    len = sys.stdin.readline()
-    try:
-        len = int(len)
-    except ValueError:
-        print('    Must enter a number')
-        len = None
-        passLength()
-    len = int(len)
-    if len < 6:
-        print('    Invalid Entry. Password must be at least 6 characters in length')
-        passLength()
-    else:
-        return len
+    passlen = None
+    while not passlen:
+        unchecked = input()
+        try:
+            passlen = int(unchecked)
+            if passlen < 6:
+                passlen = None
+                print('    Invalid Entry. Password must be at least 6 characters in length')
+        except ValueError:
+            print('    You must enter a number')
 
 def BoolCheck():
     upCheck = sys.stdin.readline()
