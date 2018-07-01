@@ -14,3 +14,9 @@
 /Python/build/* linguist-vendored
 /Python/dist/* linguist-vendored
 /Python/PasswordGenerator.spec linguist-vendored
+/CSharp/PasswordGenerator/bin/* linguist-vendored
+/CSharp/PasswordGenerator/obj/* linguist-vendored
+/CSharp/PasswordGenerator/Properties/* linguist-vendored
+/CSharp/PasswordGenerator/PasswordGenerator.csproj linguist-vendored
+/CSharp/PasswordGenerator.sln linguist-vendored
+/CSharp/PasswordGenerator.userprefs linguist-vendored
